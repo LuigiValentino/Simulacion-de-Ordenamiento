@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Ordenamiento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Simulación de Ordenamiento</h1>
+        <div class="controls">
+            <div class="control-group">
+                <label for="algorithm">Algoritmo:</label>
+                <select id="algorithm">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="merge">Merge Sort</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="control-group buttons">
+            <button onclick="startSort()" class="button start"><i class="fas fa-play"></i></button>
+            <button onclick="stopSort()" class="button stop"><i class="fas fa-stop"></i></button>
+            <button onclick="shuffleElements()" class="button shuffle"><i class="fas fa-random"></i></button>
+        </div>
+        <div class="stats">
+            <p>Comparaciones: <span id="comparisons">0</span></p>
+            <p>Tiempo: <span id="time">0 ms</span></p>
+        </div>
+        <div class="container" id="array-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
